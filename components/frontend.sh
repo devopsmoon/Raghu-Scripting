@@ -4,4 +4,7 @@
 # Description:
 # Modified Date:
 
-echo -e "\e[1;33mInstalling nginx server\e[0m"
+source  components/common.sh
+HEAD "Updating system"
+yum updatee -y
+

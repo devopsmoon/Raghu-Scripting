@@ -1,10 +1,7 @@
 #!/bin/bash
 
 HELLO() {
-  if [ $1 -eq 0 ]
-  then
-      echo -e "\e[1;33m$1\e[0m"
-      fi
+      echo -e "\e[1m$1\e[0m \t\t ..."
 }
 STATS() {
   if [ $? -eq 0 ]
