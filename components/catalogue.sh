@@ -11,7 +11,7 @@ HEAD "Installing nodejs server"
 yum install nodejs make gcc-c++ -y
 STAT $?
 HEAD "Add roboshop user app"
-    useradd -d /home/roboshop -m -s /bin/bash
+    useradd -d /home/roboshop -m -s /bin/bash roboshop
     STAT $?
     mkdir -p /home/roboshop/catalogue/
     HEAD "download the source code from github"
