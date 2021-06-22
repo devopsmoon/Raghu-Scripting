@@ -25,7 +25,7 @@ HEAD "moving to HTDOCS"
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 mv /usr/share/nginx/html/static/* /usr/share/nginx/html/
-mv /usr/share/nginx/localhost.conf /etc/nginx/default.d/roboshop.conf
+mv /usr/share/nginx/html/localhost.conf /etc/nginx/nginx.conf
 rmdir /usr/share/nginx/html/static
 HEAD "Starting nginx service"
 systemctl start nginx
