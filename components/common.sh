@@ -3,10 +3,13 @@
 HEAD() {
       echo -e "\e[1m$1\e[0m \t\t ..."
 }
-STATS() {
-  if [ $? -eq 0 ]
+STAT() {
+  if [ $1 -eq 0 ]
   then
   echo -e "\e[1;31m done......\e[0m"
-  echo -e "\[1;33m fail..... check the logs for more details\e[0m"
+  else
+  echo -e "\e[1;31m Fail.....\e[0m"
+  echo -e "\e[1;3m check the logs for more details..... logfile: /tmp/logs\e[0m"
+  exit 1
   fi
 }
