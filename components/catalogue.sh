@@ -11,7 +11,7 @@ HEAD "Installing nodejs server"
 yum install nodejs make gcc-c++ -y
 STAT $?
 HEAD "Add roboshop user app"
-id roboshop
+#id roboshop
 if [ $? -eq 0 ]
 then
   echo "User is already exists"
