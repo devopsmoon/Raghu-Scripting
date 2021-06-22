@@ -3,5 +3,7 @@
 # Date:
 # Description:
 # Modified Date:
-
-echo -e "\e[1;33mInstalling nodejs server\e[0m"
+source components/common.sh
+HEAD "Updating system"
+yum update -y && yum install epel-release -y && yum update -y
+STAT $?
