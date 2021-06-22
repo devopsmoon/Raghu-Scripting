@@ -11,7 +11,7 @@ HEAD "Installing nodejs server"
 yum install nodejs make gcc-c++ -y
 STAT $?
 HEAD "Add roboshop user app"
-#id roboshop
+id roboshop
 if [ $? -eq 0 ]
 then
   echo "User is already exists"
@@ -34,6 +34,8 @@ then
     STAT $?
     sed -i 's/localhost/172.31.10.219/' /home/roboshop/catalogue/server.js
     STAT $?
+    HEAD "Giving permission to roboshop folder"
+    chown -R roboshop:roboshop /home/roboshop
     HEAD "moving  systemd service file"
     mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
     STAT $?
