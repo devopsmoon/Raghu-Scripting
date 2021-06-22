@@ -3,6 +3,7 @@
 # Date:
 # Description:
 # Modified Date:
+source components/mongodb.sh
 HEAD "Updating the system"
 yum update -y
 STAT $?
