@@ -9,7 +9,7 @@ STAT() {
   echo -e "\e[1;31m done......\e[0m"
   else
   echo -e "\e[1;31m Fail.....\e[0m"
-  echo -e "\e[1;3m check the logs for more details..... logfile: /tmp/logs\e[0m"
+  echo -e "\e[1;33m check the logs for more details..... logfile: /tmp/logs\e[0m"
   exit 1
   fi
 }
