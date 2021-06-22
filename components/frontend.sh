@@ -7,4 +7,5 @@
 source  components/common.sh
 HEAD "Updating system"
 yum updatee -y
+STAT $?
 
