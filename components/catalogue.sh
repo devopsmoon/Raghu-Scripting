@@ -11,7 +11,7 @@ HEAD "Installing nodejs server"
 yum install nodejs make gcc-c++ -y
 STAT $?
 HEAD "Add roboshop user app"
-#id roboshop
+id roboshop
 if [ $? -eq 0 ]
 then
   echo "User is already exists"
@@ -40,5 +40,5 @@ then
     mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
     STAT $?
     HEAD "Starting the systemctl services"
-    systemctl start catalogue && systemctl enable catalogue
+    systemctl daemon-reload && systemctl start catalogue && systemctl enable catalogue
     STAT $?
