@@ -5,6 +5,7 @@ HELLO() {
 }
 STATS() {
   if [ $? -eq 0 ]
+  then
   echo -e "\e[1;31m done......\e[0m"
   echo -e "\[1;33m fail..... check the logs for more details\e[0m"
   fi
